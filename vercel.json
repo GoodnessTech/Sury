@@ -1,4 +1,11 @@
 {
+  "installCommand": "cd \"Sury Frontend\" && npm install",
   "buildCommand": "cd \"Sury Frontend\" && npm run build",
-  "outputDirectory": "Sury Frontend/dist"
+  "outputDirectory": "Sury Frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
