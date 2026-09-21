@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: #17191a;
+  background: #f4f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f4f6f2; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.mono { font-family: 'DM Mono', monospace; }
+
+@layer utilities {
+  .animate-rise { animation: rise .55s cubic-bezier(.22,1,.36,1) both; }
+  .animate-pulse-soft { animation: pulse-soft 2.5s ease-in-out infinite; }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-soft { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+@layer components {
+  .btn-primary { @apply bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition font-medium; }
+  .btn-secondary { @apply bg-white text-stone-900 border border-stone-300 rounded-lg hover:border-stone-900 transition font-medium; }
+  .btn-warning { @apply bg-amber-100 text-amber-900 border border-amber-300 rounded-lg hover:bg-amber-200 transition font-medium; }
+  .btn-ghost { @apply bg-stone-100 text-stone-700 rounded-lg hover:bg-stone-200 transition font-medium; }
+  .input-field { @apply w-full px-3 py-2.5 rounded-lg border border-stone-300 bg-white focus:border-stone-900 focus:outline-none transition; }
+}

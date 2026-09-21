@@ -1,0 +1,15 @@
+{
+  "network": "BOT Chain Mainnet",
+  "chainId": 677,
+  "rpcUrl": "https://rpc.botchain.ai",
+  "contractName": "SuryTreasury",
+  "contractAddress": "0xcB68b99e5b02b1E6A6AEE361089e1AdcdACEfe00",
+  "transactionHash": "0x1816ba0049d2bfbb2256ca58f9a317bd1a60db8680c0d7e89c6715c579c63aaf",
+  "blockNumber": 24021595,
+  "deployer": "0x34090545BD562b0bE1Cdc855F7cA9beE4566CE51",
+  "gasUsed": "2492658",
+  "gasPrice": "20000000000",
+  "deploymentCostBot": "0.04985316",
+  "compilerVersion": "0.8.24",
+  "deployedAt": "2026-09-21T14:23:24.821Z"
+}

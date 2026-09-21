@@ -1,0 +1,17 @@
+{
+  "name": "sury-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SURY Protocol Smart Contracts for BOT Chain Mainnet",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js --network botchain",
+    "smoke-test": "hardhat run scripts/smoke-test.js --network botchain"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.6.1",
+    "hardhat": "^2.29.1"
+  }
+}

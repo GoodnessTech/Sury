@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd \"Sury Frontend\" && npm run build",
+  "outputDirectory": "Sury Frontend/dist"
+}

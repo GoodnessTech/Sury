@@ -1,0 +1,26 @@
+# Environment variables (contains private keys - NEVER COMMIT)
+.env
+.env.local
+.env.*.local
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Hardhat build artifacts
+contracts/artifacts/
+contracts/cache/
+
+# Vite production build
+dist/
+dist-ssr/
+Sury Frontend/dist/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

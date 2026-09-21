@@ -1,0 +1,39 @@
+{
+  "contractAddress": "0xcB68b99e5b02b1E6A6AEE361089e1AdcdACEfe00",
+  "chainId": 677,
+  "timestamp": "2026-09-21T14:24:16.300Z",
+  "transactions": {
+    "fundTreasury": {
+      "hash": "0xe63e9252fb8790ae0183f896509f26eb04f515676f14988f25a85d83edace350",
+      "gasUsed": "45959"
+    },
+    "createAgent": {
+      "agentId": 1,
+      "hash": "0xa611feb5e71b2f9595b534142d8d2ffcbc450a7462b9efb1af89c1aad4e62822",
+      "gasUsed": "243053"
+    },
+    "createPolicy": {
+      "policyId": 1,
+      "hash": "0xfb894959c9cd51b4c1db2517e71660850935be1c7890fdf48095fbf4f307ab8c",
+      "gasUsed": "289581"
+    },
+    "createTask": {
+      "taskId": 1,
+      "hash": "0xaa766e3ada3fa2787fcff25e73d5caf2feae0c8215be0f0ece8298fd1fb88596",
+      "gasUsed": "283181"
+    },
+    "approveTask": {
+      "hash": "0xef5e7be8257df222186116c3bfed4773b9fb380f63db5aad18db3ee3c958c731",
+      "gasUsed": "32625"
+    },
+    "executePayment": {
+      "hash": "0x281bea0dcbedbd37e6a15c76477cb816f309c2d715cc3ab7f8b3cf5166fe91b3",
+      "gasUsed": "184203"
+    }
+  },
+  "policyViolationTest": {
+    "attemptedAmount": "0.0003",
+    "limit": "0.0002",
+    "revertedSuccessfully": true
+  }
+}
