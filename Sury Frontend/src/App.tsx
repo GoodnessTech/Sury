@@ -16,16 +16,16 @@ function Shell() {
   const [route, setRoute] = useState<RouteId>('overview');
 
   return (
-    <div className="flex h-screen bg-stone-50 font-sans antialiased selection:bg-stone-900 selection:text-white">
+    <div className="flex h-screen bg-[#F8FAFC] font-sans antialiased selection:bg-sury-primary selection:text-white">
       <Sidebar route={route} onNavigate={setRoute} />
       <div className="flex-1 flex flex-col min-w-0">
-        <header className="hidden lg:flex items-center justify-between h-16 border-b border-stone-200/80 bg-white/80 backdrop-blur-md px-8 sticky top-0 z-20">
+        <header className="hidden lg:flex items-center justify-between h-16 border-b border-slate-200/80 bg-white/90 backdrop-blur-md px-8 sticky top-0 z-20">
           <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/90 border border-blue-200/60 text-sury-primary text-xs font-semibold shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-sury-primary animate-pulse" />
               {botChain.name} (#{botChain.chainId})
             </span>
-            <span className="hidden xl:inline text-xs text-stone-400 font-mono">
+            <span className="hidden xl:inline text-xs text-slate-400 font-mono">
               Treasury: {botChain.contracts.treasury.slice(0, 6)}...{botChain.contracts.treasury.slice(-4)}
             </span>
           </div>
@@ -54,4 +54,3 @@ export default function App() {
     </ToastProvider>
   );
 }
-

@@ -50,21 +50,21 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         {toasts.map((t) => (
           <div
             key={t.id}
-            className={`pointer-events-auto flex items-start gap-3 p-4 rounded-xl border shadow-lg backdrop-blur-md transition-all duration-300 transform translate-y-0 ${
+            className={`pointer-events-auto flex items-start gap-3 p-4 rounded-2xl border shadow-xl backdrop-blur-md transition-all duration-300 transform translate-y-0 ${
               t.type === 'success'
-                ? 'bg-emerald-950/90 border-emerald-800 text-emerald-100'
+                ? 'bg-emerald-950/95 border-emerald-800 text-emerald-100'
                 : t.type === 'error'
-                ? 'bg-red-950/90 border-red-800 text-red-100'
+                ? 'bg-red-950/95 border-red-800 text-red-100'
                 : t.type === 'warning'
-                ? 'bg-amber-950/90 border-amber-800 text-amber-100'
-                : 'bg-stone-900/90 border-stone-700 text-stone-100'
+                ? 'bg-amber-950/95 border-amber-800 text-amber-100'
+                : 'bg-sury-slate/95 border-slate-700 text-slate-100'
             }`}
           >
             <div className="shrink-0 mt-0.5">
               {t.type === 'success' && <CheckCircle2 size={18} className="text-emerald-400" />}
               {t.type === 'error' && <XCircle size={18} className="text-red-400" />}
               {t.type === 'warning' && <AlertTriangle size={18} className="text-amber-400" />}
-              {t.type === 'info' && <Info size={18} className="text-blue-400" />}
+              {t.type === 'info' && <Info size={18} className="text-sury-primary" />}
             </div>
             <div className="flex-1 min-w-0 text-xs">
               <p className="font-semibold text-sm leading-tight text-white mb-0.5">{t.title}</p>

@@ -4,7 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 900: '#14532d' },
+        sury: {
+          primary: '#0F73ED',
+          'primary-hover': '#0D64D0',
+          'primary-active': '#0A52AD',
+          'primary-light': '#EBF3FE',
+          slate: '#262B31',
+          'slate-hover': '#1C2025',
+          'slate-light': '#F1F4F8',
+          border: '#E2E8F0',
+          surface: '#FFFFFF',
+          background: '#F8FAFC',
+        },
       },
     },
   },

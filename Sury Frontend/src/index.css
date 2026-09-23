@@ -6,14 +6,29 @@
 
 :root {
   font-family: 'Space Grotesk', system-ui, sans-serif;
-  color: #17191a;
-  background: #f4f6f2;
+  color: #0F172A;
+  background: #F8FAFC;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
+  /* SURY Logo-Derived Design Tokens */
+  --sury-primary: #0F73ED;
+  --sury-primary-hover: #0D64D0;
+  --sury-primary-active: #0A52AD;
+  --sury-primary-light: #EBF3FE;
+  --sury-secondary: #262B31;
+  --sury-secondary-hover: #1C2025;
+  --sury-background: #F8FAFC;
+  --sury-surface: #FFFFFF;
+  --sury-surface-elevated: #FFFFFF;
+  --sury-border: #E2E8F0;
+  --sury-border-hover: #CBD5E1;
+  --sury-text: #0F172A;
+  --sury-text-muted: #64748B;
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; min-width: 320px; background: #f4f6f2; }
+body { margin: 0; min-width: 320px; background: #F8FAFC; color: #0F172A; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 .mono { font-family: 'DM Mono', monospace; }
@@ -27,9 +42,26 @@ button { cursor: pointer; }
 @keyframes pulse-soft { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
 
 @layer components {
-  .btn-primary { @apply bg-stone-900 text-white rounded-lg hover:bg-stone-800 transition font-medium; }
-  .btn-secondary { @apply bg-white text-stone-900 border border-stone-300 rounded-lg hover:border-stone-900 transition font-medium; }
-  .btn-warning { @apply bg-amber-100 text-amber-900 border border-amber-300 rounded-lg hover:bg-amber-200 transition font-medium; }
-  .btn-ghost { @apply bg-stone-100 text-stone-700 rounded-lg hover:bg-stone-200 transition font-medium; }
-  .input-field { @apply w-full px-3 py-2.5 rounded-lg border border-stone-300 bg-white focus:border-stone-900 focus:outline-none transition; }
+  /* Modern Rounded Interactive Buttons */
+  .btn-primary {
+    @apply bg-sury-primary text-white rounded-xl hover:bg-sury-primary-hover active:bg-sury-primary-active transition-all duration-200 font-medium shadow-sm hover:shadow active:scale-[0.99] inline-flex items-center justify-center;
+  }
+  .btn-secondary {
+    @apply bg-white text-sury-slate border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 transition-all duration-200 font-medium shadow-sm active:scale-[0.99] inline-flex items-center justify-center;
+  }
+  .btn-dark {
+    @apply bg-sury-slate text-white rounded-xl hover:bg-sury-slate-hover active:bg-black transition-all duration-200 font-medium shadow-sm active:scale-[0.99] inline-flex items-center justify-center;
+  }
+  .btn-warning {
+    @apply bg-amber-50 text-amber-900 border border-amber-200 rounded-xl hover:bg-amber-100 transition-all duration-200 font-medium active:scale-[0.99] inline-flex items-center justify-center;
+  }
+  .btn-ghost {
+    @apply bg-slate-100/80 text-slate-700 rounded-xl hover:bg-slate-200/80 transition-all duration-200 font-medium active:scale-[0.99] inline-flex items-center justify-center;
+  }
+  .btn-danger {
+    @apply bg-red-50 text-red-700 border border-red-200 rounded-xl hover:bg-red-100 transition-all duration-200 font-medium active:scale-[0.99] inline-flex items-center justify-center;
+  }
+  .input-field {
+    @apply w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white focus:border-sury-primary focus:ring-2 focus:ring-sury-primary/20 focus:outline-none transition-all duration-150;
+  }
 }
