@@ -11,6 +11,7 @@ import { TasksPage } from '@/pages/TasksPage';
 import { ReceiptsPage } from '@/pages/ReceiptsPage';
 import { ActivityPage } from '@/pages/ActivityPage';
 import { botChain, type RouteId } from '@/config';
+import { Globe, ExternalLink } from 'lucide-react';
 
 function Shell() {
   const [route, setRoute] = useState<RouteId>('overview');
@@ -31,14 +32,44 @@ function Shell() {
           </div>
           <WalletButton />
         </header>
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 pt-20 lg:pt-8">
-          {route === 'overview' && <OverviewPage onNavigate={setRoute} />}
-          {route === 'treasury' && <TreasuryPage />}
-          {route === 'agents' && <AgentsPage onNavigate={setRoute} />}
-          {route === 'policies' && <PoliciesPage />}
-          {route === 'tasks' && <TasksPage />}
-          {route === 'receipts' && <ReceiptsPage />}
-          {route === 'activity' && <ActivityPage />}
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 pt-20 lg:pt-8 flex flex-col">
+          <div className="flex-1">
+            {route === 'overview' && <OverviewPage onNavigate={setRoute} />}
+            {route === 'treasury' && <TreasuryPage />}
+            {route === 'agents' && <AgentsPage onNavigate={setRoute} />}
+            {route === 'policies' && <PoliciesPage />}
+            {route === 'tasks' && <TasksPage />}
+            {route === 'receipts' && <ReceiptsPage />}
+            {route === 'activity' && <ActivityPage />}
+          </div>
+
+          <footer className="mt-12 pt-6 pb-2 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-slate-700">SURY</span>
+              <span>&bull;</span>
+              <span>Autonomous Agent Treasury on BOT Chain</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://botchain.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-slate-600 hover:text-sury-primary font-medium transition-colors"
+              >
+                <Globe size={14} className="text-slate-400" />
+                <span>BOT Chain Official Website</span>
+              </a>
+              <a
+                href="https://scan.botchain.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-slate-600 hover:text-sury-primary font-medium transition-colors"
+              >
+                <ExternalLink size={14} className="text-slate-400" />
+                <span>BotScan</span>
+              </a>
+            </div>
+          </footer>
         </main>
       </div>
     </div>

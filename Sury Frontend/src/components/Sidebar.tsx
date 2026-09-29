@@ -9,6 +9,8 @@ import {
   Activity,
   Menu,
   X,
+  Globe,
+  ExternalLink,
 } from 'lucide-react';
 import { navigation, type RouteId, botChain } from '@/config';
 import { WalletButton } from '@/components/ui';
@@ -138,6 +140,30 @@ export function Sidebar({
             <span className="mono font-medium text-slate-700">{botChain.name}</span>
           </div>
           <p className="text-[10px] text-slate-400 mono">Chain ID #{botChain.chainId}</p>
+
+          <div className="mt-3 pt-2.5 border-t border-slate-200/60 flex items-center justify-between text-[11px]">
+            <a
+              href="https://botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-sury-primary inline-flex items-center gap-1 font-medium transition-colors"
+              title="BOT Chain Official Website"
+            >
+              <Globe size={12} className="text-slate-400" />
+              <span>botchain.ai</span>
+            </a>
+            <span className="text-slate-300">&bull;</span>
+            <a
+              href="https://scan.botchain.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-sury-primary inline-flex items-center gap-1 font-medium transition-colors"
+              title="BotScan Explorer"
+            >
+              <ExternalLink size={12} className="text-slate-400" />
+              <span>BotScan</span>
+            </a>
+          </div>
         </div>
       </aside>
     </>
